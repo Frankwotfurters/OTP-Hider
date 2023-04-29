@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:otp_hider/smsWidget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,6 +51,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String latestMsg = '';
 
   void _incrementCounter() {
     setState(() {
@@ -112,6 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   : 'OTP Hider is not running',
               style: GoogleFonts.workSans(),
             ),
+            SmsListener(),
           ],
         ),
       ),
